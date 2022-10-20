@@ -6,14 +6,15 @@
 // L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 
 
-console.log('hello');
+
 function generapassword(){
-console.log('ciao');
+
     let name = document.getElementById('name').value;
     let km = document.getElementById('km').value;
     let age = document.getElementById('age').value;
     const price = 0.21;
     let total = km * price;
+    let ticket
 
     // sconto 20%
     let totaldiscount20 = (total / 100) * 20;
@@ -24,20 +25,26 @@ console.log('ciao');
     let discount40 = total - totaldiscount40;
 
 
-    if (age == "MINORENNE"){
-        total = discount20.toFixed(2);
+    if (age === "MINORENNE"){
+        total = totaldiscount20.toFixed(2);
+        ticket = "BIGLIETTO RIDOTTO"
     }
     
-    else if (age == "OVER 65"){
-         total = discount40.toFixed(2);
-    }
-    
-    else{
-    total
+    else if (age === "OVER 65"){
+         total = totaldiscount40.toFixed(2);
+         ticket = "BIGLIETTO OVER"
     }
 
+    else{
+        ticket = "BIGLIETTO STANDARD"
+    }
+    
     document.getElementById('displayinfo2').innerHTML = name;
     document.getElementById('displayinfo').innerHTML = total + "€";
+    document.getElementById('displayinfo3').innerHTML = ticket;
+
+
+    
 
 
 

@@ -1,5 +1,5 @@
 body{
-    background-color: brown;
+    background-color:rgb(185, 20, 80) ;
 }
 
 .white{
@@ -16,7 +16,6 @@ body{
 
 .ticket{
     width:70rem;
-    
     margin:10px auto;
     background-color: white;
 }
