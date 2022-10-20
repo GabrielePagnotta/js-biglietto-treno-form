@@ -14,7 +14,10 @@ function generapassword(){
     let age = document.getElementById('age').value;
     const price = 0.21;
     let total = km * price;
-    let ticket
+    let ticket;
+    let rail = Math.floor(Math.random() * 10) + 1;
+    let cp = Math.floor(Math.random() * 9999) + 1;
+
 
     // sconto 20%
     let totaldiscount20 = (total / 100) * 20;
@@ -37,14 +40,16 @@ function generapassword(){
 
     else{
         ticket = "BIGLIETTO STANDARD"
+    
     }
     
     document.getElementById('displayinfo2').innerHTML = name;
     document.getElementById('displayinfo').innerHTML = total + "€";
     document.getElementById('displayinfo3').innerHTML = ticket;
+    document.getElementById('displayinfo4').innerHTML = rail;
+    document.getElementById('displayinfo5').innerHTML = cp;
 
 
-    
 
 
 
