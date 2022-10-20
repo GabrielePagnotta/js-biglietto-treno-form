@@ -36,8 +36,8 @@ console.log('ciao');
     total
     }
 
-    document.getElementById('displayinfo2').innerHTML = "nome passeggero: " + name;
-    document.getElementById('displayinfo').innerHTML = "prezzo biglietto: " + total + "€";
+    document.getElementById('displayinfo2').innerHTML = name;
+    document.getElementById('displayinfo').innerHTML = total + "€";
 
 
 
