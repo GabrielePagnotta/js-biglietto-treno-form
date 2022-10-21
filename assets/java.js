@@ -29,12 +29,12 @@ function generapassword(){
 
 
     if (age === "MINORENNE"){
-        total = totaldiscount20.toFixed(2);
+        total = discount20.toFixed(2);
         ticket = "BIGLIETTO RIDOTTO"
     }
     
     else if (age === "OVER 65"){
-         total = totaldiscount40.toFixed(2);
+         total = discount40.toFixed(2);
          ticket = "BIGLIETTO OVER"
     }
 
